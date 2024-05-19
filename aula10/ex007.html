@@ -7,13 +7,36 @@
     <style>
         body {
             font: normal 18pt arial;
+            background-color: rgba(163, 255, 127, 0.76);
         }
+
+        h1 {
+            color: white;
+            text-shadow: 1px 2px 1px black;
+        }
+
         input {
             font: normal 18pt arial;
             width: 100px;
         }
         div#res {
-            padding-top: 20px;
+            background-color: lightgray;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        #somar {
+            background-color: rgba(0, 0, 0, 0.418);
+        }
+
+        #somar:hover {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.678);
+            translate: -5% -5%;
+            box-shadow: 2px 2px 5px black;
+            transition: .3s;
         }
     </style>
 </head>
@@ -21,7 +44,7 @@
     <h1>Somando Valores</h1>
     <input type="number" name="txtn1" id="txtn1"> +
     <input type="number" name="txtn2" id="txtn2">
-    <input type="button" value="Somar" onclick="somar()">
+    <input id="somar" type="button" value="Somar" onclick="somar()">
     <div id="res">Resultado</div>
     <script>
         function somar() {
