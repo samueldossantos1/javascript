@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidades</title>
+</head>
+<body>
+   <h1>Testando Nacionalidades</h1>
+   <p>Onde você nasceu?</p>
+   <input type="text" name="txtpais" id="txtpais">
+   <input type="button" value="Verificar" onclick="descobrir()">
+   <div id="res">
+
+   </div>
+   <script>
+    function descobrir() {
+        var nac = 'Estrangeiro';
+        var pais = window.document.querySelector ('input#txtpais').value;
+        var res = window.document.querySelector('div#res');
+        if (pais.toLowerCase() === 'brasil') {
+            nac = 'Brasileiro';
+        }
+        res.innerHTML = `Você é ${nac}`
+    }
+   </script>
+</body>
+</html>
