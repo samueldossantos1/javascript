@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        header {
+            padding: 10px;
+            max-width: 800px;
+            margin: auto;
+            background-color: lightgrey;
+        }
+
+        p {
+            font-size: 2em;
+            color: rgb(241, 56, 56);
+        }
+
+        #ihora {
+            width: 300px;
+            height: 30px;
+            border-radius: 8px;
+        }
+
+        #botao {
+            width: 150px;
+            height: 40px;
+            background-color: brown;
+            color: white;
+        }
+
+        #botao:hover {
+            background-color: rgba(236, 88, 88, 0.726);
+            translate: -3% -3%;
+            transition: .3s;
+            box-shadow: 3px 3px 5px black;
+            text-decoration: underline;
+        }
+
+        h1 {
+            padding: 5px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        #ifoto {
+            
+        }
+
+        #ihora {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p id="paragrafo">Olá</p> <input type="number" name="hora" id="ihora" placeholder="valores entre 0-5 / 6-11 / 12-18 / 18-23" > <br>
+        <input id="botao" type="button" value="Verificar" onclick="bomdia()">
+        <h1 id="itexto">TESTE!</h1>
+        <img src="imagens/inicio.jpg" alt="Gato" id="ifoto">
+        <div id="res">
+        </div>
+    </header>
+    <script> 
+
+    var nome = prompt('DIGITE O SEU NOME')
+    if (nome == null) {
+        alert('VOCÊ TEM QUE DIGITAR SEU NOME.');
+        location.reload();
+    }
+    paragrafo.innerText += ` ${nome}, Que horas são?`
+        function bomdia() {
+             var h = window.document.getElementById('ihora').value;
+             var imagem = document.getElementById('ifoto')
+            var hora = Number(h);
+
+            if (hora <= 5) {
+                itexto.innerHTML = ('BOA MADRUGADA! COMO DIZ O FILÓSOFO BRASILEIRO LUVA DE PREDEIRO "DESCANÇAR NÉ, PQ O CARA NÃO É DE FERRO"!');
+                imagem.src = 'imagens/boa-madrugada.jpg'
+            } else if (hora < 12) {
+                itexto.innerHTML = ('BOM DIA NÉ! NADA VAI DAR ERRADO SE VOCÊ NÃO TENTAR, ENTÃO PARA DE DESEJAR E COMECE A DESISTIR');
+                imagem.src = 'imagens/bom-dia.jpg'
+            } else if (hora < 18) {
+                itexto.innerHTML = ('BOA TARDE BB! SE AGENTE COLHE OQUE PLANTA, SABOTARAM MINHA HORTA PQ EU NÃO PLANTEI ISSO TUDO QUE EU TO COLHENDO NÃO!!');
+                imagem.src = 'imagens/boa-tarde.webp'
+            } else if (hora < 24) {
+                itexto.innerHTML = ('BOA NOITE!! AGORA SIM CHEGOU A HORA DE SE DIVERTIR E ESQUECER QUE VC É UM(A) CLT DO PROLETARIADO KKK');
+                imagem.src = 'imagens/boa-noite.jpg'
+            } else {
+                itexto.innerHTML = ('VOCÊ É ANALFABETO POR ACASO? AS HORAS SÃO ENTRE 00 E 23, POR FAVOR, TENTE NOVAMENTE! OBG!');
+                imagem.src = 'imagens/errou.jpg' 
+            }
+
+        }
+    </script>
+
+</body>
+</html>
