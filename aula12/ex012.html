@@ -68,11 +68,13 @@
     </header>
     <script> 
 
-    var nome = prompt('DIGITE O SEU NOME')
-    if (nome == null) {
+    var n = prompt('DIGITE O SEU NOME')
+    if (n == null) {
         alert('VOCÊ TEM QUE DIGITAR SEU NOME.');
         location.reload();
     }
+
+    var nome = n.toUpperCase();
     paragrafo.innerText += ` ${nome}, Que horas são?`
         function bomdia() {
              var h = window.document.getElementById('ihora').value;
@@ -80,19 +82,19 @@
             var hora = Number(h);
 
             if (hora <= 5) {
-                itexto.innerHTML = ('BOA MADRUGADA! COMO DIZ O FILÓSOFO BRASILEIRO LUVA DE PREDEIRO "DESCANÇAR NÉ, PQ O CARA NÃO É DE FERRO"!');
+                itexto.innerHTML = (`BOA MADRUGADA ${nome}! COMO DIZ O FILÓSOFO BRASILEIRO LUVA DE PREDEIRO "DESCANÇAR NÉ, PQ O CARA NÃO É DE FERRO"!`);
                 imagem.src = 'imagens/boa-madrugada.jpg'
             } else if (hora < 12) {
-                itexto.innerHTML = ('BOM DIA NÉ! NADA VAI DAR ERRADO SE VOCÊ NÃO TENTAR, ENTÃO PARA DE DESEJAR E COMECE A DESISTIR');
+                itexto.innerHTML = (`BOM DIA NÉ ${nome} ! NADA VAI DAR ERRADO SE VOCÊ NÃO TENTAR, ENTÃO PARA DE DESEJAR E COMECE A DESISTIR`);
                 imagem.src = 'imagens/bom-dia.jpg'
             } else if (hora < 18) {
-                itexto.innerHTML = ('BOA TARDE BB! SE AGENTE COLHE OQUE PLANTA, SABOTARAM MINHA HORTA PQ EU NÃO PLANTEI ISSO TUDO QUE EU TO COLHENDO NÃO!!');
+                itexto.innerHTML = (`BOA TARDE ${nome} ! SE AGENTE COLHE OQUE PLANTA, SABOTARAM MINHA HORTA PQ EU NÃO PLANTEI ISSO TUDO QUE EU TO COLHENDO NÃO!!`);
                 imagem.src = 'imagens/boa-tarde.webp'
             } else if (hora < 24) {
-                itexto.innerHTML = ('BOA NOITE!! AGORA SIM CHEGOU A HORA DE SE DIVERTIR E ESQUECER QUE VC É UM(A) CLT DO PROLETARIADO KKK');
+                itexto.innerHTML = (`BOA NOITE ${nome} !! AGORA SIM CHEGOU A HORA DE SE DIVERTIR E ESQUECER QUE VC É UM(A) CLT DO PROLETARIADO KKK`);
                 imagem.src = 'imagens/boa-noite.jpg'
             } else {
-                itexto.innerHTML = ('VOCÊ É ANALFABETO POR ACASO? AS HORAS SÃO ENTRE 00 E 23, POR FAVOR, TENTE NOVAMENTE! OBG!');
+                itexto.innerHTML = (`${nome} VOCÊ É ANALFABETO POR ACASO? AS HORAS SÃO ENTRE 00 E 23, POR FAVOR, TENTE NOVAMENTE! OBG!`);
                 imagem.src = 'imagens/errou.jpg' 
             }
 
