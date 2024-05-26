@@ -3,6 +3,8 @@
 body {
     background: rgb(73, 73, 255);
     font: normal 15pt arial;
+    height: 88vh;
+    position: relative;
 }
 
 header {
@@ -25,7 +27,16 @@ div {
 }
 
 footer {
+    background-color: rgba(0, 0, 0, 0.726);
     color: white;
     text-align: center;
     font-style: italic;
+    position: absolute;
+    width: 100vw;
+    height: 40px;
+    top: 100%;
+}
+
+footer > p {
+    margin: auto;
 }
